@@ -3,11 +3,11 @@ title: 姜斌
 email: 549974268@qq.com
 description: >
   记录生活和工作的点点滴滴.
-baseurl: "/lizijin"
+baseurl: 
 url: "http://jiangbin.me"
 fixedNav: 'true' # true or false
 theme: purple # green, blue, orange, purple, grey
-twitterUsername: 
+twitterUsername:
 githubUsername: lizijin
 dribbbleUsername:
 codepenUsername:
