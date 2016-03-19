@@ -3,8 +3,10 @@ layout: post
 comments: true
 categories: RxJava
 ---
+本文大部分代码基于[lambdaexpressions](http://docs.oracle.com/javase/tutorial/java/javaOO/lambdaexpressions.html?from=timeline&isappinstalled=0)
 #写在前面的话
 
+    
     本文只讲Lambda语法,不会涉及到API讲解,也不会涉及到RxJava原理介绍。个人感觉Lambda表达式是RxJava的基础,只有明白Lambda表达式才能理解RxJava的一些函数的含义。
     
 大概是在一年前知道[RxJava](https://github.com/ReactiveX/RxJava)项目,于是兴致勃勃的上网去搜索各种关于RxJava的各种教程。当看到类似下面的代码时,总感觉跟平常写的代码有些不一样,感觉除了Builder模式一般不会出现这么多的函数串联调用。但是又不是Builder模式实在是有点费解。仔细看有Func1 Action1这样的接口类,实在是费解如此命名下的类的含义,为何如此大名鼎鼎的框架会违背Java命名规范？
