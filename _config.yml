@@ -1,21 +1,32 @@
 # Site settings
-title: 姜斌
+title: Just Do It
 email: 549974268@qq.com
-description: >
-  记录生活和工作的点点滴滴.
-baseurl: 
-url: "http://jiangbin.me"
-fixedNav: 'true' # true or false
-theme: purple # green, blue, orange, purple, grey
-twitterUsername:
-githubUsername: lizijin
-dribbbleUsername:
-codepenUsername:
+description: 姜斌的博客
+# > # this means to ignore newlines until "baseurl:"
+#   Write an awesome description for your new site here. You can edit this
+#   line in _config.yml. It will appear in your document head meta (for
+#   Google search results) and in your feed.xml site description.
+
+# baseurl: "" # the subpath of your site, e.g. /blog/
+# url: "http://yourdomain.com" # the base hostname & protocol for your site
+# twitter_username: jekyllrb
+github_username: lizijin
+permalink: /:year/:month/:day/:title/
+# this is the url root of the view source link on the footer page.
+viewsourceroot: https://github.com/lizijin/lizijin.github.io/blob/master/
+# this is the url root of the create page link on the footer page.
+newsourceroot: https://github.com/lizijin/lizijin.github.io/new/master
+#########################################
+# for duoshuo.com commenting system, uncomment following line if you do not want to include duoshuo.com.
+# disqus.com commenting system. please note that it is exclusive with duoshuo.com
+disqus_shortname: lizijin
+disqus_url: "http://lizijin.github.io"
+#########################################
 
 # Build settings
-permalink: /:year/:month/:title
 markdown: kramdown
-include: [_pages]
-exclude: [_site, CHANGELOG.md, LICENSE, README.md]
-sass:
-  style: compressed
+
+# highlight
+# highlighter: pygments
+# highlighter: rouge
+# highlighter: false
