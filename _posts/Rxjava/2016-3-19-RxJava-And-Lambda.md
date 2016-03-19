@@ -5,7 +5,7 @@ categories: RxJava
 ---
 #写在前面的话
 
-    本文只讲Lamda语法,不会涉及到API讲解,也不会涉及到RxJava原理介绍。个人感觉Lamda表达式是RxJava的基础,只有明白Lamda表达式才能理解RxJava的一些函数的含义。
+    本文只讲Lambda语法,不会涉及到API讲解,也不会涉及到RxJava原理介绍。个人感觉Lambda表达式是RxJava的基础,只有明白Lambda表达式才能理解RxJava的一些函数的含义。
     
 大概是在一年前知道[RxJava](https://github.com/ReactiveX/RxJava)项目,于是兴致勃勃的上网去搜索各种关于RxJava的各种教程。当看到类似下面的代码时,总感觉跟平常写的代码有些不一样,感觉除了Builder模式一般不会出现这么多的函数串联调用。但是又不是Builder模式实在是有点费解。仔细看有Func1 Action1这样的接口类,实在是费解如此命名下的类的含义,为何如此大名鼎鼎的框架会违背Java命名规范？
 
@@ -26,9 +26,9 @@ categories: RxJava
         }
     });
 
-之后由于时间精力有限,也就没有再深入学习RxJava。但是RxJava的一些疑问点还是一直存留在脑海中。不明白的始终还是不明白。直到有一天看到了一篇关于[Lamda](http://docs.oracle.com/javase/tutorial/java/javaOO/lambdaexpressions.html?from=timeline&isappinstalled=0)的文章。才豁然开朗,然后再对RxJava二进宫。果然事半功倍,很快就掌握了RxJava基础。所以Lamda是RxJava的基础是成立的。
+之后由于时间精力有限,也就没有再深入学习RxJava。但是RxJava的一些疑问点还是一直存留在脑海中。不明白的始终还是不明白。直到有一天看到了一篇关于[Lambda](http://docs.oracle.com/javase/tutorial/java/javaOO/lambdaexpressions.html?from=timeline&isappinstalled=0)的文章。才豁然开朗,然后再对RxJava二进宫。果然事半功倍,很快就掌握了RxJava基础。所以Lambda是RxJava的基础是成立的。
 
-那么什么是Lamda表达式呢？
+那么什么是Lambda表达式呢？
 
 我们在写Android程序或者GUI程序时,按钮的点击事件代码是信手拈来
 
@@ -40,17 +40,17 @@ categories: RxJava
         }
     });
 
-Java8加入了对Lamda表达式的支持,上面代码的Lamda表达式为
+Java8加入了对Lambda表达式的支持,上面代码的Lambda表达式为
 
     Button clickButton = 初始化button;
     clickButton.setOnClickListener((View v)->System.out.println("你点击了按钮");
 
-Lamda表达式是多么的简洁原本七行的代码用两行代码就轻轻松松搞定.(View v)可以将类型省略掉,因为v类型可以自动推倒
+Lambda表达式是多么的简洁原本七行的代码用两行代码就轻轻松松搞定.(View v)可以将类型省略掉,因为v类型可以自动推倒
 
     Button clickButton = 初始化button;
     clickButton.setOnClickListener((View v)->System.out.println("你点击了按钮");
     
-上述Lamda是Android内置的函数,那么我们如何编写属于自己的Lamda表达式下面我们将通过一个实例来一步步讲解
+上述Lamda是Android内置的函数,那么我们如何编写属于自己的Lambda表达式下面我们将通过一个实例来一步步讲解
 
     假设我们有一个Person类,定义如下
     public  class Person{
@@ -138,7 +138,7 @@ Lamda表达式是多么的简洁原本七行的代码用两行代码就轻轻松
         }
     });
 
-## 5.使用Lamda表达式
+## 5.使用Lambda表达式
 
     printPersons(
         roster,
@@ -207,7 +207,7 @@ Lamda表达式是多么的简洁原本七行的代码用两行代码就轻轻松
     }
 接下来我们重新定义printPersons方法
 
-    //注意我们这里不在是printPersons 因为通过使用Consume我们可以在查找到符合条件的对象后我们字可以自定义如何处理这些对象
+    //注意我们这里不在是printPersons 因为通过使用Consume我们可以在查找到符合条件的对象后我们可以自定义如何处理这些对象
     //我们不仅仅局限于打印出这些人的信息这样一个动作了
     public static void processPersons(List<Person> roster,Predicate<Person> tester, Consumer<Person> block) {
         for (Person p : roster) {
