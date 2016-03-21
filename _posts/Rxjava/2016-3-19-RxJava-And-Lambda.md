@@ -5,7 +5,7 @@ categories: RxJava
 ---
 本文大部分代码基于[lambdaexpressions](http://docs.oracle.com/javase/tutorial/java/javaOO/lambdaexpressions.html?from=timeline&isappinstalled=0)
 
-#写在前面的话
+# 写在前面的话
 
     
     本文只讲Lambda语法,不会涉及到API讲解,也不会涉及到RxJava原理介绍。个人感觉Lambda表达式是RxJava的基础,只有明白Lambda表达式才能理解RxJava的一些函数的含义。
@@ -129,7 +129,7 @@ Lambda表达式是多么的简洁原本七行的代码用两行代码就轻轻�
     //具体调用
     printPersons(roster, new CheckPersonEligibleForSelectiveService());
     
-##4. 使用匿名内部类
+## 4. 使用匿名内部类
 
     printPersons(roster, new CheckPersonEligibleForSelectiveService());
     #等价于
@@ -278,5 +278,5 @@ Lambda表达式是多么的简洁原本七行的代码用两行代码就轻轻�
         .subscribe(s->System.out.println(s));//相当于forEach(s->System.out.println(s));
         //forEach是同步的 subscribe是异步的
 
-#总结
+# 总结
 第一次写文章,不对之处望指正
